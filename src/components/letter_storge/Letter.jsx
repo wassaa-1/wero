@@ -1,26 +1,20 @@
 import React from 'react'
 import { Button, Modal } from 'react-bootstrap'
+import './Letter.css'
 
 const Letter = props => {
-
     // Todo : 편지 열면 뜨는 팝업 창 만들어야함, modal로 만들 듯?
 
     return (
-        <div>
-            <Modal show={props.show} onHide={props.onHide}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>{props.content}</Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={props.onClick}>
-                        Close
-                    </Button>
-                    <Button variant="primary" onClick={props.onClick}>
-                        Save Changes
-                    </Button>
-                </Modal.Footer>
-            </Modal>
+        <div className='modal'>
+            <div onClick={props.onClick} className='overlay'></div>
+            <div className='modal-content'>
+                <h2>Hello Modal</h2>
+                <p>props.content</p>
+                <button className='close-modal' onClick={props.onClick}>
+                    CLOSE
+                </button>
+            </div>
         </div>
     )
 }
