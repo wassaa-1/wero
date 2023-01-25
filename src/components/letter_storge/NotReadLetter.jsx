@@ -3,18 +3,6 @@ import './Letter.css'
 
 const dummyData = [
     {
-        state: '읽음',
-        nickName: '닉네임1',
-        letterName: '제목 제목 제목제목제목',
-        date: '2023.01.12',
-        content: '안녕 나는 1번이야',
-    }, {
-        state: '읽음',
-        nickName: '닉네임2',
-        letterName: '제목 제목',
-        date: '2023.01.14',
-        content: '나는 2번이야',
-    }, {
         state: '안읽음',
         nickName: '닉네임3',
         letterName: '제목 제목',
@@ -23,8 +11,7 @@ const dummyData = [
     }
 ]
 
-
-const AllLetter = props => {
+const NotReadLetter = props => {
     const [letter, setLetter] = useState({});
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -78,4 +65,4 @@ const AllLetter = props => {
     )
 }
 
-export default AllLetter
+export default NotReadLetter

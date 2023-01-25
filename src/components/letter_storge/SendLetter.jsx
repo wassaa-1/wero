@@ -3,28 +3,28 @@ import './Letter.css'
 
 const dummyData = [
     {
-        state: '읽음',
-        nickName: '닉네임1',
-        letterName: '제목 제목 제목제목제목',
-        date: '2023.01.12',
-        content: '안녕 나는 1번이야',
-    }, {
-        state: '읽음',
-        nickName: '닉네임2',
-        letterName: '제목 제목',
-        date: '2023.01.14',
-        content: '나는 2번이야',
-    }, {
-        state: '안읽음',
-        nickName: '닉네임3',
-        letterName: '제목 제목',
+        state: '보냄',
+        nickName: '나',
+        letterName: '보낸 편지1',
         date: '2023.01.18',
-        content: '나는 3번인데ㅋㅋ',
-    }
+        content: '나는 1번 보낸편지',
+    }, {
+        state: '보냄',
+        nickName: '나',
+        letterName: '보낸 편지2',
+        date: '2023.01.18',
+        content: '나는 2',
+    }, {
+        state: '보냄',
+        nickName: '나',
+        letterName: '보낸 편지3',
+        date: '2023.01.18',
+        content: '3번입니다.',
+    },
+
 ]
 
-
-const AllLetter = props => {
+const SendLetter = props => {
     const [letter, setLetter] = useState({});
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -67,9 +67,6 @@ const AllLetter = props => {
                         <button className="close-modal bg-slate-200 rounded-xl" onClick={handleClose}>
                             뒤로가기
                         </button>
-                        <button className="answer-btn bg-black text-white rounded-xl" onClick={handleClose}>
-                            회신
-                        </button>
                     </div>
                 </div>
             </div>)}
@@ -78,4 +75,4 @@ const AllLetter = props => {
     )
 }
 
-export default AllLetter
+export default SendLetter
