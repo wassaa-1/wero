@@ -15,7 +15,7 @@ const Setting = props => {
                         <img src="img/arrow.png" className='mr-2' alt="" />
                     </div>
                 </Link>
-                <Link to={'/setting/userInfo'}>
+                <Link to={'/setting/alarmSetting'}>
                     <div className='flex justify-between items-center w-full h-16 rounded-lg bg-gray-100'>
                         <p> </p>
                         <div className='flex items-center'>

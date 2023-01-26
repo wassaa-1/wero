@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
+import AlarmSetting from './AlarmSetting'
 import ChangePersonalInfo from './ChangePersonalInfo'
 import MyPage from './MyPage'
 import Setting from './Setting'
@@ -18,6 +19,7 @@ const FirstSettingPage = props => {
                 <Route path='/userInfo/*' element={<UserInfo />}></Route>
                 <Route path='/userInfo/myPage/*' element={<MyPage />}></Route>
                 <Route path='/userInfo/changeUserInfo/*' element={<ChangePersonalInfo />}></Route>
+                <Route path='/alarmSetting/*' element={<AlarmSetting />}></Route>
             </Routes>
         </div>
     )
